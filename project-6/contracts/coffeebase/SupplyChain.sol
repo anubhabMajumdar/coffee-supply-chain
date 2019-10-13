@@ -169,7 +169,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
   }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
-  function processItem(uint _upc) harvested(_upc) verifyCaller(items[_upc].ownerID) public 
+  function processItem(uint _upc) harvested(_upc) verifyCaller(items[_upc].originFarmerID) public 
   // Call modifier to check if upc has passed previous supply chain stage
   // Call modifier to verify caller of this function
   {
