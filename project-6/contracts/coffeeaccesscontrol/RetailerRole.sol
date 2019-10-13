@@ -3,18 +3,18 @@ pragma solidity ^0.4.24;
 // Import the library 'Roles'
 import "./Roles.sol";
 
-// Define a contract 'RetailerRole' to manage this role - add, remove, check
+// Define a contract 'FarmerRole' to manage this role - add, remove, check
 contract RetailerRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
-  event AddRetailer(address indexed account);
-  event RemoveRetailer(address indexed account);
+  event RetailerAdded(address indexed account);
+  event RetailerRemoved(address indexed account);
 
-  // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role
+  // Define a struct 'farmers' by inheriting from 'Roles' library, struct Role
   Roles.Role private retailers;
 
-  // In the constructor make the address that deploys this contract the 1st retailer
+  // In the constructor make the address that deploys this contract the 1st farmer
   constructor() public {
     _addRetailer(msg.sender);
   }
@@ -25,30 +25,30 @@ contract RetailerRole {
     _;
   }
 
-  // Define a function 'isRetailer' to check this role
+  // Define a function 'isFarmer' to check this role
   function isRetailer(address account) public view returns (bool) {
-    retailers.has(account);
+    return retailers.has(account);
   }
 
-  // Define a function 'addRetailer' that adds this role
+  // Define a function 'addFarmer' that adds this role
   function addRetailer(address account) public onlyRetailer {
     _addRetailer(account);
   }
 
-  // Define a function 'renounceRetailer' to renounce this role
+  // Define a function 'renounceFarmer' to renounce this role
   function renounceRetailer() public {
     _removeRetailer(msg.sender);
   }
 
-  // Define an internal function '_addRetailer' to add this role, called by 'addRetailer'
+  // Define an internal function '_addFarmer' to add this role, called by 'addFarmer'
   function _addRetailer(address account) internal {
     retailers.add(account);
-    emit AddRetailer(account);
+    emit RetailerAdded(account);
   }
 
-  // Define an internal function '_removeRetailer' to remove this role, called by 'removeRetailer'
+  // Define an internal function '_removeFarmer' to remove this role, called by 'removeFarmer'
   function _removeRetailer(address account) internal {
     retailers.remove(account);
-    emit RemoveRetailer(account);
+    emit RetailerRemoved(account);
   }
 }

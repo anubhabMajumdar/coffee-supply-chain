@@ -2,9 +2,11 @@ pragma solidity ^0.4.24;
 
 import "../coffeeaccesscontrol/RetailerRole.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
+import "../coffeeaccesscontrol/FarmerRole.sol";
+import "../coffeeaccesscontrol/DistributorRole.sol";
 
 // Define a contract 'Supplychain'
-contract SupplyChain is RetailerRole, ConsumerRole {
+contract SupplyChain is RetailerRole, ConsumerRole, FarmerRole, DistributorRole {
 
   // Define 'owner'
   address owner;
@@ -160,7 +162,8 @@ contract SupplyChain is RetailerRole, ConsumerRole {
   function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
   {
     // Add the new item as part of Harvest
-    items[upc] = Item({upc: _upc, sku: sku, ownerID: _originFarmerID, productID: sku+upc, productPrice: 0, distributorID: 0x0, retailerID: 0x0, consumerID: 0x0, itemState: State.Harvested, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productNotes: _productNotes});
+    uint productID = _upc + sku;
+    items[upc] = Item({upc: _upc, sku: sku, ownerID: _originFarmerID, productID: productID, productPrice: 0, distributorID: 0x0, retailerID: 0x0, consumerID: 0x0, itemState: State.Harvested, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productNotes: _productNotes});
     
     // Increment sku
     sku = sku + 1;
@@ -330,7 +333,7 @@ contract SupplyChain is RetailerRole, ConsumerRole {
     // Assign values to the 9 parameters
     itemSKU = items[_upc].sku;
     itemUPC = items[_upc].upc;
-    productID = items[_upc].sku;
+    productID = items[_upc].productID;
     productNotes = items[_upc].productNotes;
     productPrice = items[_upc].productPrice;
     itemState = uint(items[_upc].itemState);
