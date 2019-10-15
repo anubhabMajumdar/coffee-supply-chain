@@ -4,8 +4,10 @@
 
 ## Libraries
 
-* truffle
-* truffle-HD-Wallet
+* truffle (v4.1.14)
+* truffle-HD-Wallet (v1.0.8)
+* node (v8.11.3)
+* solc (v0.4.23)
 
 ## Public network (Deployed on Ropsten network)
 
