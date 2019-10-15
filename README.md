@@ -9,6 +9,7 @@
 
 ## Public network (Deployed on Ropsten network)
 
+```
 Running migration: 1_initial_migration.js
   Replacing Migrations...
   ... 0xe51af7cfd939033425ffcbeb5bb355cc8ae892ad3b00b320edbb97452e744b42
@@ -34,19 +35,20 @@ Running migration: 2_deploy_contracts.js
   SupplyChain: 0x5c37876a3a7bf7652eb5a819346b12ca8cb63f12
 Saving successful migration to network...
   ... 0x55648dfae737896ad4dd4039536e7f0f46308d6c4c5e3dcfdd9679ca90c74b1f
+```
 
 ## Transaction IDs
 
-Harvested - 0x0768544fd29e1586324970bd13b4ec06af5920e0187d941839e9be45570695ee
-Processed - 0xf0b6386f4743134087f04e515d0b6a0b93a6ea0917e7080264aebb5e280713f3
-Packed - 0xc7a6a0427ab2aa9b84edba93dccc3cd811d51a6ba62b3b409b4cbb96058d1ce2
-ForSale - 0xad9e0f491cb45e83aaa1a76651d5af9e404c812c541e34f39589479ea98e9c2b
-Sold - 0xb8fbd1cc3d67a65b52e9d4f68470cb2f718a92d8c5eeff554f90a43843431247
-Shipped - 0x1a25038f0f43ba29e7cba5a9eb0a487e6bd231ed521357bf57a4a40f7259cdbb
-Received - 0xd9ad22bba5740d84cbd065d5ac748a56bd068e0a9b3d8abab7c217df8fb091c0
-Purchased - 0x6a60110185edb77d89d2da92bc92a0940203476fada75b6bfb9240e3384b103a
+1. Harvested - 0x0768544fd29e1586324970bd13b4ec06af5920e0187d941839e9be45570695ee
+2. Processed - 0xf0b6386f4743134087f04e515d0b6a0b93a6ea0917e7080264aebb5e280713f3
+3. Packed - 0xc7a6a0427ab2aa9b84edba93dccc3cd811d51a6ba62b3b409b4cbb96058d1ce2
+4. ForSale - 0xad9e0f491cb45e83aaa1a76651d5af9e404c812c541e34f39589479ea98e9c2b
+5. Sold - 0xb8fbd1cc3d67a65b52e9d4f68470cb2f718a92d8c5eeff554f90a43843431247
+6. Shipped - 0x1a25038f0f43ba29e7cba5a9eb0a487e6bd231ed521357bf57a4a40f7259cdbb
+7. Received - 0xd9ad22bba5740d84cbd065d5ac748a56bd068e0a9b3d8abab7c217df8fb091c0
+8. Purchased - 0x6a60110185edb77d89d2da92bc92a0940203476fada75b6bfb9240e3384b103a
 
-FarmerAdded - 0x983cd9686b35fcaab03e16d73ed54760145cacb5a75e5a55a1bb60d8aaf41c97
-AddDistributor - 0xa5961fb5a34c919cf0b1ed548f3deeeffd3ae45f9252d05e30a6a0ef1fdd391a
-RetailerAdded - 0x8f7d4d059f6a25cb3359747b03a1a0ef4d0a559675f339b2a7c1c29869aebfb8
-AddConsumer - 0x44629aa420b4ae5582e586cb9e0551dbc0ef8b9d27d8f25a4ef970aa6965398f
+* FarmerAdded - 0x983cd9686b35fcaab03e16d73ed54760145cacb5a75e5a55a1bb60d8aaf41c97
+* AddDistributor - 0xa5961fb5a34c919cf0b1ed548f3deeeffd3ae45f9252d05e30a6a0ef1fdd391a
+* RetailerAdded - 0x8f7d4d059f6a25cb3359747b03a1a0ef4d0a559675f339b2a7c1c29869aebfb8
+* AddConsumer - 0x44629aa420b4ae5582e586cb9e0551dbc0ef8b9d27d8f25a4ef970aa6965398f
