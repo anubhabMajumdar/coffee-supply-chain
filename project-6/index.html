@@ -53,6 +53,7 @@
             <br>
             <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
             <br>
+            <button class="btn-add-farmer" id="button" type="button" data-id="11">Add Farmer</button>
             <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
             <button class="btn-process" id="button" type="button" data-id="2">Process</button>
             <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
@@ -81,6 +82,9 @@
             <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
                 size="50"><br>
             <br>
+            <button class="btn-add-distributor" id="button" type="button" data-id="12">Add Distributor</button>
+            <button class="btn-add-retailer" id="button" type="button" data-id="13">Add Retailer</button>
+            <button class="btn-add-consumer" id="button" type="button" data-id="14">Add Consumer</button>
             <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
             <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
             <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
@@ -98,6 +102,10 @@
         <br>
         <hr>
     </div>
+    <h2>Status</h2>
+    <br>
+      <span id="status"></span>
+    <br>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="src/js/web3.min.js"></script>

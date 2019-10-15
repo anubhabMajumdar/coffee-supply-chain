@@ -31,7 +31,7 @@ contract RetailerRole {
   }
 
   // Define a function 'addFarmer' that adds this role
-  function addRetailer(address account) public onlyRetailer {
+  function addRetailer(address account) public {
     _addRetailer(account);
   }
 
