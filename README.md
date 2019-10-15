@@ -52,3 +52,5 @@ Saving successful migration to network...
 * AddDistributor - 0xa5961fb5a34c919cf0b1ed548f3deeeffd3ae45f9252d05e30a6a0ef1fdd391a
 * RetailerAdded - 0x8f7d4d059f6a25cb3359747b03a1a0ef4d0a559675f339b2a7c1c29869aebfb8
 * AddConsumer - 0x44629aa420b4ae5582e586cb9e0551dbc0ef8b9d27d8f25a4ef970aa6965398f
+
+* Example: https://ropsten.etherscan.io/tx/0x6a60110185edb77d89d2da92bc92a0940203476fada75b6bfb9240e3384b103a
